@@ -1,3 +1,5 @@
+require 'date'
+
 def return_10()
   return 10
 end
@@ -76,4 +78,36 @@ def volume_of_sphere(radius)
   volume = (4 * pi * (radius.to_f**3.0))/3
   return volume.round(1)
 end  
+
+def days_until_christmas()
+  current_year = Date.now
+  year = 2016
+  christmas = "#{year}/12/25"
+  
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
