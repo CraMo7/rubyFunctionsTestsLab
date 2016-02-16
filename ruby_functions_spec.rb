@@ -68,12 +68,15 @@ class Functions_Practice < MiniTest::Test
 
   #Given the length of a side of a cube calculate the volume 
   def test_volume_of_cube()
-
+    volume = volume_of_cube(4)
+    assert_equal(64, volume)
   end
 
   #Given the radius of a sphere calculate the volume
+  #r = 10, v = 4188.8
   def test_volume_of_sphere()
-
+    volume = volume_of_sphere(10)
+    assert_equal(4188, volume)
   end
 
   #http://ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html
