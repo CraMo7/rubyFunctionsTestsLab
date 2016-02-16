@@ -66,7 +66,14 @@ def number_to_short_month_name(month_number)
   return substring
 end
 
+def volume_of_cube(edge)
+  volume = edge**3
+  return volume
+end
 
-
-
+def volume_of_sphere(radius)
+  pi = 3.14159262
+  volume = (4 * pi * (radius.to_f**3.0))/3
+  return volume
+end  
 

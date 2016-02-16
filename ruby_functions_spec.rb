@@ -76,7 +76,7 @@ class Functions_Practice < MiniTest::Test
   #r = 10, v = 4188.8
   def test_volume_of_sphere()
     volume = volume_of_sphere(10)
-    assert_equal(4188, volume)
+    assert_equal(4188.8, volume)
   end
 
   #http://ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html
