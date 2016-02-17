@@ -101,6 +101,10 @@ def age_of_person(day_of_birth, month_of_birth, year_of_birth)
   current_month = Time.new.month
   current_day = Time.new.day
 
+  if current_month == 2 && current_day == 29
+    current_month = 3
+  end
+
   if current_month > month_of_birth
     bday_passed = true
   elsif current_month < month_of_birth
