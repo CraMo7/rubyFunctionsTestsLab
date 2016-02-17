@@ -80,9 +80,16 @@ def volume_of_sphere(radius)
 end  
 
 def days_until_christmas()
-  christmas_yday = 359
+  leap = Date.leap?(Time.new.year)
+
+  if leap
+    christmas_yday = 360
+  elsif !leap
+    christmas_yday = 359
+  end
+
   today = Time.new.yday
-  days_til_xmas = christmas_yday - today
+  days_til_xmas = christmas_yday - today - 1 #-1 because current day doesn't count - only counting whole days aka "nights" til xmas
   return days_til_xmas
 end
 
