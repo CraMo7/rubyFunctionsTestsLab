@@ -93,8 +93,27 @@ def days_until_christmas()
 end
 
 def age_of_person(day_of_birth, month_of_birth, year_of_birth)
-  age = Time.new.year - year_of_birth
-  return age
+  #basic version with no month/day awareness:
+  # age = Time.new.year - year_of_birth
+  # return age
+  
+
+  
+  current_year = Date.new.year
+  current_month = Date.new.month
+  current_day = Date.new.day
+
+  if current_month < month_of_birth
+    #month of birth has passed this year
+    age = current_year - year_of_birth
+  elsif current_month > month_of_birth
+    #month of birth is later in this year
+    age = current_year - year_of_birth - 1
+  elsif current_month == month_of_birth && 
+    #month of birth is current month
+
+  end
+
 end
 
 
