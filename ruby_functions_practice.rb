@@ -79,15 +79,9 @@ def volume_of_sphere(radius)
   return volume.round(1)
 end  
 
-#used for the final 2 functions which need knowledge of which day of the year it currently is
-def get_yday()
-  return Time.new.to_a[7]
-  # alternative? return Time.new.yday
-end
-
 def days_until_christmas()
   christmas_yday = 359
-  today = get_yday()
+  today = Time.new.yday
   days_til_xmas = christmas_yday - today
   return days_til_xmas
 end
