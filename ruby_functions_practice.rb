@@ -1,4 +1,4 @@
-require 'date'
+# require 'date'
 
 def return_10()
   return 10
@@ -81,6 +81,7 @@ end
 
 def days_until_christmas()
   leap = Date.leap?(Time.new.year)
+  leap_next = Date.leap?(Time.new.year+1)
 
   if leap
     christmas_yday = 360
@@ -89,6 +90,15 @@ def days_until_christmas()
   end
 
   today = Time.new.yday
+
+  if today > christmas_yday
+    if leap_next
+      christmas_yday += 366
+    elsif !leap_next
+      christmas_yday += 365
+    end
+  end  
+
   days_til_xmas = christmas_yday - today - 1 #-1 because current day doesn't count - only counting whole days aka "nights" til xmas
   return days_til_xmas
 end
