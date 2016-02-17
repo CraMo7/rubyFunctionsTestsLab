@@ -92,8 +92,9 @@ def days_until_christmas()
   return days_til_xmas
 end
 
-def age_of_person(dateOfBirth)
-  
+def age_of_person(day_of_birth, month_of_birth, year_of_birth)
+  age = Time.new.year - year_of_birth
+  return age
 end
 
 
