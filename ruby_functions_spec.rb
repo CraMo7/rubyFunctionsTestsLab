@@ -83,7 +83,7 @@ class Functions_Practice < MiniTest::Test
   #Days until christmas, Calculate how many nights there are from today until Christmas morning
   def test_days_until_christmas()
     daysToGo = days_until_christmas()
-    assert_equal(312, daysToGo)
+    assert_equal(311, daysToGo)
   end
 
   #Given a date of birth, calculate how old a person born on that date would be
