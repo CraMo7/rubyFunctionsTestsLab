@@ -97,38 +97,31 @@ def age_of_person(day_of_birth, month_of_birth, year_of_birth)
   # age = Time.new.year - year_of_birth
   # return age
   
+  current_year = Time.new.year
+  current_month = Time.new.month
+  current_day = Time.new.day
 
-  
-  current_year = Date.new.year
-  current_month = Date.new.month
-  current_day = Date.new.day
-
-  if current_month < month_of_birth
-    #month of birth has passed this year
-    age = current_year - year_of_birth
-  elsif current_month > month_of_birth
-    #month of birth is later in this year
-    age = current_year - year_of_birth - 1
-  elsif current_month == month_of_birth && 
-    #month of birth is current month
-
+  if current_month > month_of_birth
+    bday_passed = true
+  elsif current_month < month_of_birth
+    bday_passed = false
+  elsif current_month == month_of_birth
+    if current_day > day_of_birth
+      bday_passed = true
+    elsif current_day < day_of_birth
+      bday_passed = false
+    elsif current_day == day_of_birth
+      bday_passed = true
+      happy_birthday = true#unused in this function - if providing more detailed output than simply age, display happy birthday message "if happy_birthday"
+    end  
   end
 
+  if bday_passed
+    age = current_year - year_of_birth
+  elsif !bday_passed
+    age = current_year - year_of_birth - 1
+  end
+
+  return age
+
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
