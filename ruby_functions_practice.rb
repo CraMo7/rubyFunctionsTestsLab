@@ -110,7 +110,8 @@ def age_of_person(day_of_birth, month_of_birth, year_of_birth)
       bday_passed = false
     elsif current_day == day_of_birth
       bday_passed = true
-      happy_birthday = true#unused in this function - if providing more detailed output than simply age, display happy birthday message "if happy_birthday"
+      #happy_birthday = true
+      #unused in this function - if providing more detailed output than simply age, display happy birthday message "if happy_birthday"
     end  
   end
 
