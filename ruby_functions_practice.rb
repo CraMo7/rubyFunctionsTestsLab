@@ -82,6 +82,7 @@ end
 #used for the final 2 functions which need knowledge of which day of the year it currently is
 def get_yday()
   return Time.new.to_a[7]
+  # alternative? return Time.new.yday
 end
 
 def days_until_christmas()
